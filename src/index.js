@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import { BrowserRouter, Route } from "react-router-dom";
+
+
 function Home() {
   return (
     <div>
@@ -9,8 +12,24 @@ function Home() {
   );
 }
 
-function App() {
-  return <Home />;
-}
 
-ReactDOM.render(<App />, document.getElementById("root"));
+
+//function App() {
+ //return <Home />;
+//}
+
+ReactDOM.render(
+
+<BrowserRouter>
+     <Route path="/">
+
+      <Home/>
+
+     </Route>
+</BrowserRouter>
+
+
+
+document.getElementById("root")
+
+);
